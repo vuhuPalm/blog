@@ -1,0 +1,5 @@
+mixin articleCard(article)
+    a.card(href=`/article/${article.id}`)
+        image.card-image(src=article.image_url)
+        div.card-body
+            div.card-title=article.title
