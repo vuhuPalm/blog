@@ -36,7 +36,12 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Comment',
     timestamps: false,
-    tableName: 'blog_comments'
+    tableName: 'blog_comments',
+    defaultScope: {
+      where: {
+        parent_comment_id: null
+      }
+    }
   });
   return Comment;
 };
