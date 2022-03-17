@@ -1,4 +1,4 @@
-const {Comment} = require('../models');
+const {Comment, Reply} = require('../models');
 
 module.exports.createComment = async function(req, res) {
     let articleId = req.params.articleId;
